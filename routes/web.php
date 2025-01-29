@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/tasks/{id}/edit', [AdminController::class, 'edit'])->name('tasks.edit');
     Route::put('/admin/tasks/{id}', [AdminController::class, 'update'])->name('tasks.update');
     Route::delete('/admin/tasks/{id}', [AdminController::class, 'destroy'])->name('tasks.destroy');
+
 });
 
 Route::middleware('auth')->group(function () {
